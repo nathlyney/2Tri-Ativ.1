@@ -53,3 +53,10 @@ function mostraPergunta(){
     cxPerguntas.textContent = perguntaAtual.enunciado;
 
 }
+
+function mostraAlternativas () {
+  for (var alternativa of perguntaAtual.alternativas) {
+    botaoAlternativas.textContent = alternativa;
+    cxAlternativas.appendChild(botaoAlternativas);
+  }
+}
