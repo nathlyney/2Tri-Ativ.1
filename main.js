@@ -90,6 +90,10 @@ var perguntaAtual;
 mostraPergunta();
 
 function mostraPergunta(){
+    if (atual >= perguntas.length) {
+        mostrarResultado();
+        return;
+    }
     perguntaAtual = perguntas[posiçãoAtual];
     cxPerguntas.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
